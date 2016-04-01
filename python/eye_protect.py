@@ -9,7 +9,7 @@ EYE_PROTECT_FILE_SCRIPT = EYE_PROTECT_FILE_DIR + "\\eye_protect.vbs"
 scheduler = BlockingScheduler()
 
 
-@scheduler.scheduled_job("cron", minute="*/40", hour="*")
+@scheduler.scheduled_job("cron", minute="30/40", hour="*")
 def eye_protect():
     os.system(EYE_PROTECT_FILE_SCRIPT)
 scheduler.start()
