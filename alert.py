@@ -16,6 +16,3 @@ def checkMysqlVersionWithPython35_alert():
     msg_box = QMessageBox(QMessageBox.Warning, "友情提示", "mysql的python3.5驱动出来了！")
     msg_box.show()
     app.exec_()
-
-
-eye_protect_alert()
