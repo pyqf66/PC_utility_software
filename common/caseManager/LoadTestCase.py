@@ -23,7 +23,7 @@ class LoadTestCase(object):
             self.rowLinesNum=self.table.nrows
             self.colLinesNum=self.table.ncols
         
-        def getXlsData(self,num=0):
+        def getXlsData(self,num=1):
             u'''
                 num为当前行号或列号
             '''
