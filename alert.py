@@ -4,15 +4,8 @@ from PyQt5.QtWidgets import QMessageBox
 import sys
 
 
-def eye_protect_alert():
+def alert(remind, message):
     app = QApplication(sys.argv)
-    msg_box = QMessageBox(QMessageBox.Warning, "友情提示", "40分钟了，起来溜达溜达吧！")
-    msg_box.show()
-    app.exec_()
-
-
-def checkMysqlVersionWithPython35_alert():
-    app = QApplication(sys.argv)
-    msg_box = QMessageBox(QMessageBox.Warning, "友情提示", "mysql的python3.5驱动出来了！")
+    msg_box = QMessageBox(QMessageBox.Warning, remind, message)
     msg_box.show()
     app.exec_()

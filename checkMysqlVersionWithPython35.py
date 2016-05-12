@@ -4,7 +4,7 @@ import re
 import requests
 from apscheduler.schedulers.blocking import BlockingScheduler
 
-from alert import *
+from alert import alert
 
 URL_DES = "http://dev.mysql.com/downloads/connector/python/"
 RE_STR = "Python 3.5"
@@ -21,7 +21,6 @@ def check(re_str, url):
     text = rep.text
     match = re.compile(re_str)
     if match.findall(text):
-        checkMysqlVersionWithPython35_alert()
-
+        alert("情友提示", "mysql的python3.5驱动出来了！")
 
 scheduler.start()
